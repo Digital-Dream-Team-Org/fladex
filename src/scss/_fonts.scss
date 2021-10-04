@@ -7,20 +7,94 @@
 //        url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 // }
 
+// ALS Hauss
 @font-face {
-  font-family: "Open Sans";
+  font-family: "ALS Hauss";
+  src: url("../fonts/ALS Hauss/ALSHauss-Bold.eot");
+  src: local("ALS Hauss Bold"), local("ALSHauss-Bold"),
+    url("../fonts/ALS Hauss/ALSHauss-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/ALS Hauss/ALSHauss-Bold.woff2") format("woff2"),
+    url("../fonts/ALS Hauss/ALSHauss-Bold.woff") format("woff"),
+    url("../fonts/ALS Hauss/ALSHauss-Bold.ttf") format("truetype");
+  font-weight: bold;
   font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans"), local("OpenSans-Regular"),
-    url("../fonts/OpenSans/OpenSans-Regular.woff2") format("woff2"),
-    url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: "ALS Hauss Book";
+  src: url("../fonts/ALS Hauss/ALSHauss-Book.eot");
+  src: local("ALS Hauss Book"), local("ALSHauss-Book"),
+    url("../fonts/ALS Hauss/ALSHauss-Book.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/ALS Hauss/ALSHauss-Book.woff2") format("woff2"),
+    url("../fonts/ALS Hauss/ALSHauss-Book.woff") format("woff"),
+    url("../fonts/ALS Hauss/ALSHauss-Book.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
-  font-weight: 700;
-  src: local("Open Sans Bold"), local("OpenSans-Bold"),
-    url("../fonts/OpenSans/OpenSans-Bold.woff2") format("woff2"),
-    url("../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ALS Hauss";
+  src: url("../fonts/ALS Hauss/ALSHauss-Medium.eot");
+  src: local("ALS Hauss Medium"), local("ALSHauss-Medium"),
+    url("../fonts/ALS Hauss/ALSHauss-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/ALS Hauss/ALSHauss-Medium.woff2") format("woff2"),
+    url("../fonts/ALS Hauss/ALSHauss-Medium.woff") format("woff"),
+    url("../fonts/ALS Hauss/ALSHauss-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ALS Hauss";
+  src: url("../fonts/ALS Hauss/ALSHauss-Regular.eot");
+  src: local("ALS Hauss Regular"), local("ALSHauss-Regular"),
+    url("../fonts/ALS Hauss/ALSHauss-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/ALS Hauss/ALSHauss-Regular.woff2") format("woff2"),
+    url("../fonts/ALS Hauss/ALSHauss-Regular.woff") format("woff"),
+    url("../fonts/ALS Hauss/ALSHauss-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Gotham
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/Gotham Pro/GothamPro-Bold.eot");
+  src: local("Gotham Pro Bold"), local("GothamPro-Bold"),
+    url("../fonts/Gotham Pro/GothamPro-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Gotham Pro/GothamPro-Bold.woff2") format("woff2"),
+    url("../fonts/Gotham Pro/GothamPro-Bold.woff") format("woff"),
+    url("../fonts/Gotham Pro/GothamPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/Gotham Pro/GothamPro-Medium.eot");
+  src: local("Gotham Pro Medium"), local("GothamPro-Medium"),
+    url("../fonts/Gotham Pro/GothamPro-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Gotham Pro/GothamPro-Medium.woff2") format("woff2"),
+    url("../fonts/Gotham Pro/GothamPro-Medium.woff") format("woff"),
+    url("../fonts/Gotham Pro/GothamPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/Gotham Pro/GothamPro.eot");
+  src: local("Gotham Pro"), local("GothamPro"),
+    url("../fonts/Gotham Pro/GothamPro.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Gotham Pro/GothamPro.woff2") format("woff2"),
+    url("../fonts/Gotham Pro/GothamPro.woff") format("woff"),
+    url("../fonts/Gotham Pro/GothamPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }

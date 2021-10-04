@@ -1,2 +1,13 @@
 // Import all 3rd party plugins styles
+@import "fontello";
+
+$grid-gutter-width: 16px !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1160px,
+) !default;
+
 @import "node_modules/bootstrap/scss/bootstrap";
