@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home</title>
     <link rel="stylesheet" href="css/components.min.css" />
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.min.css" />
     <link rel="stylesheet" href="css/media.min.css" />
   </head>
@@ -21,11 +22,11 @@
         <div class="container">
           <h2 class="section__title">Немного обо мне</h2>
           <div class="row">
-            <div class="col-md-5">
-              <img src="/" alt="img" class="img-rounded" />
+            <div class="col-lg-5">
+              <img src="assets/img1.png" alt="img" class="img-rounded section__content-image" />
             </div>
-            <div class="col-md-7">
-              <div>
+            <div class="col-lg-7">
+              <div class="ml-lg-5">
                 <p>
                   Меня зовут Максим Истляев, я — интернет-маркетолог. В
                   интернете также известен под ником FladeX.
@@ -45,19 +46,19 @@
                   SEO, консультации по инвестированию в интернет-проекты.
                 </p>
               </div>
-              <div>
+              <div class="mt-5 ml-lg-5">
                 <a href="#" class="dd-button dd-button--accent"> К услугам </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-skills">
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <h2 class="section__title text-left">Что умею?</h2>
-              <div>
+              <div class="pr-lg-2">
                 <p>
                   У меня на самом деле большой опыт работы, благодаря которому я
                   стал классным руководителем отдела маркетинга. В своё время я
@@ -71,8 +72,8 @@
                 </p>
               </div>
             </div>
-            <div class="col-md-6">
-              <img src="/" alt="pic" />
+            <div class="col-lg-6">
+              <img src="assets/grapchics.svg" alt="pic" class="section__content-image" />
             </div>
           </div>
         </div>
@@ -81,36 +82,330 @@
         <div class="container">
           <div class="section__header">
             <h2 class="section__title">Мои услуги</h2>
-            <a href="#" class="section__header-details-btn"> Все услуги </a>
+            <a href="#" class="section__header-details-btn">
+              <span>Все услуги</span>
+              <i class="icon-arrow"></i>
+            </a>
           </div>
           <div class="row">
-            <div class="col-md-6">card</div>
-            <div class="col-md-3">card</div>
-            <div class="col-md-3">card</div>
-            <div class="col-md-3">card</div>
-            <div class="col-md-3">card</div>
-            <div class="col-md-3">card</div>
+            <div class="col-lg-6 mb-4">
+              <div class="service-cover-card-wrap">
+                <a href="#">
+                  <div class="service-cover-card">
+                    <div class="service-cover-card__title">
+                      Бесплатная консультация по маркетингу
+                    </div>
+                    <div class="service-cover-card__text">
+                      За полчаса в онлайне мы разберем с вами интернет-маркетинг
+                      вашей компании и составим план развития.
+                    </div>
+                    <div class="service-cover-card__splash-wrap">
+                      <img
+                        src="assets/marketing.png"
+                        alt="bg"
+                        class="service-cover-card__splash"
+                      />
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <div class="service-card-wrap">
+                <a href="#">
+                  <div class="service-card">
+                    <div class="service-card__title">Title</div>
+                    <div class="service-card__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Tenetur, quisquam?
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <div class="service-card-wrap">
+                <a href="#">
+                  <div class="service-card">
+                    <div class="service-card__title">Title</div>
+                    <div class="service-card__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Tenetur, quisquam?
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <div class="service-card-wrap">
+                <a href="#">
+                  <div class="service-card">
+                    <div class="service-card__title">Title</div>
+                    <div class="service-card__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Tenetur, quisquam?
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <div class="service-card-wrap">
+                <a href="#">
+                  <div class="service-card">
+                    <div class="service-card__title">Title</div>
+                    <div class="service-card__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Tenetur, quisquam?
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+              <div class="service-card-wrap">
+                <a href="#">
+                  <div class="service-card">
+                    <div class="service-card__title">Title</div>
+                    <div class="service-card__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Tenetur, quisquam?
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section--accent overflow-hidden">
         <div class="container">
           <div class="section__header">
-            <h2 class="section__title">Мои услуги</h2>
-            <a href="#" class="section__header-details-btn"> Все кейсы </a>
+            <h2 class="section__title">Кейсы</h2>
+            <a href="#" class="section__header-details-btn">
+              <span>Все кейсы</span>
+              <i class="icon-arrow"></i>
+            </a>
           </div>
-          <div>slider</div>
+          <div class="content-swiper-wrap">
+            <div
+              class="content-swiper swiper-container"
+              data-slides-per-view-lg="3"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="case-card-wrap">
+                    <a href="#">
+                      <div class="case-card">
+                        <div class="case-card__image-wrap">
+                          <img
+                            src="assets/case_img.png"
+                            alt="pic"
+                            class="case-card__image"
+                          />
+                        </div>
+                        <div class="case-card__content">
+                          <div class="case-card__title">Title</div>
+                          <div class="case-card__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem enim modi recusandae molestias, ullam
+                            distinctio.
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="case-card-wrap">
+                    <a href="#">
+                      <div class="case-card">
+                        <div class="case-card__image-wrap">
+                          <img
+                            src="assets/case_img.png"
+                            alt="pic"
+                            class="case-card__image"
+                          />
+                        </div>
+                        <div class="case-card__content">
+                          <div class="case-card__title">Title</div>
+                          <div class="case-card__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem enim modi recusandae molestias, ullam
+                            distinctio.
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="case-card-wrap">
+                    <a href="#">
+                      <div class="case-card">
+                        <div class="case-card__image-wrap">
+                          <img
+                            src="assets/case_img.png"
+                            alt="pic"
+                            class="case-card__image"
+                          />
+                        </div>
+                        <div class="case-card__content">
+                          <div class="case-card__title">Title</div>
+                          <div class="case-card__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem enim modi recusandae molestias, ullam
+                            distinctio.
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="case-card-wrap">
+                    <a href="#">
+                      <div class="case-card">
+                        <div class="case-card__image-wrap">
+                          <img
+                            src="assets/case_img.png"
+                            alt="pic"
+                            class="case-card__image"
+                          />
+                        </div>
+                        <div class="case-card__content">
+                          <div class="case-card__title">Title</div>
+                          <div class="case-card__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dolorem enim modi recusandae molestias, ullam
+                            distinctio.
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-custom-btn-prev">
+              <i class="icon-arrow"></i>
+            </div>
+            <div class="swiper-custom-btn-next">
+              <i class="icon-arrow"></i>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section overflow-hidden">
         <div class="container">
           <div class="section__header">
             <h2 class="section__title">Где писал?</h2>
-            <a href="#" class="section__header-details-btn"> Все статьи </a>
+            <a href="#" class="section__header-details-btn">
+              <span>Все статьи</span>
+              <i class="icon-arrow"></i>
+            </a>
           </div>
-          <div class="row">
-            <div class="col-md-6">card</div>
-            <div class="col-md-6">card</div>
+          <div class="content-swiper-wrap">
+            <div
+              class="content-swiper swiper-container"
+              data-slides-per-view-lg="2"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="article-card-wrap">
+                    <div class="article-card">
+                      <div class="article-card__tag-wrap dd-tag-wrap">
+                        <a href="#">
+                          <div class="article-card__tag dd-tag">
+                            blog.telderi.ru
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-card__title">
+                        <a href="#"> 74% годовых с информационного сайта </a>
+                      </div>
+                      <a href="#" class="article-card__details-btn">
+                        <span>Читать</span>
+                        <i class="icon-arrow"></i>
+                      </a>
+                      <div class="article-card__splash-wrap">
+                        <img
+                          src="assets/blog_telderi.png"
+                          alt="pic"
+                          class="article-card__splash"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="article-card-wrap">
+                    <div class="article-card">
+                      <div class="article-card__tag-wrap dd-tag-wrap">
+                        <a href="#">
+                          <div class="article-card__tag dd-tag">
+                            blog.telderi.ru
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-card__title">
+                        <a href="#"> 74% годовых с информационного сайта </a>
+                      </div>
+                      <a href="#" class="article-card__details-btn">
+                        <span>Читать</span>
+                        <i class="icon-arrow"></i>
+                      </a>
+                      <div class="article-card__splash-wrap">
+                        <img
+                          src="assets/blog_telderi.png"
+                          alt="pic"
+                          class="article-card__splash"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="article-card-wrap">
+                    <div class="article-card">
+                      <div class="article-card__tag-wrap dd-tag-wrap">
+                        <a href="#">
+                          <div class="article-card__tag dd-tag">
+                            blog.telderi.ru
+                          </div>
+                        </a>
+                      </div>
+                      <div class="article-card__title">
+                        <a href="#"> 74% годовых с информационного сайта </a>
+                      </div>
+                      <a href="#" class="article-card__details-btn">
+                        <span>Читать</span>
+                        <i class="icon-arrow"></i>
+                      </a>
+                      <div class="article-card__splash-wrap">
+                        <img
+                          src="assets/blog_telderi.png"
+                          alt="pic"
+                          class="article-card__splash"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-custom-btn-prev">
+              <i class="icon-arrow"></i>
+            </div>
+            <div class="swiper-custom-btn-next">
+              <i class="icon-arrow"></i>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
           </div>
         </div>
       </section>
@@ -118,55 +413,751 @@
         <div class="container">
           <div class="section__header">
             <h2 class="section__title">Блог</h2>
-            <a href="#" class="section__header-details-btn"> Перейти в блог </a>
+            <a href="#" class="section__header-details-btn">
+              <span>Перейти в блог</span>
+              <i class="icon-arrow"></i>
+            </a>
           </div>
           <div class="row">
-            <div class="col-md-4">card</div>
-            <div class="col-md-4">card</div>
-            <div class="col-md-4">card</div>
-            <div class="col-md-4">card</div>
-            <div class="col-md-4">card</div>
-            <div class="col-md-4">card</div>
+            <div class="col-lg-4">
+              <div class="blog-card-wrap">
+                <div class="blog-card">
+                  <div class="blog-card__date">04.11.2020</div>
+                  <div class="blog-card__title">
+                    <a href="#"> Как CMS влияют на стоимость разработки </a>
+                  </div>
+                  <div class="blog-card__image-wrap">
+                    <a href="#">
+                      <img
+                        src="assets/blog1.png"
+                        alt="pic"
+                        class="blog-card__image"
+                      />
+                    </a>
+                  </div>
+                  <div class="blog-card__meta">
+                    <div class="blog-card__meta-item-wrap">
+                      <a href="#">
+                        <div class="blog-card__meta-item">
+                          <i class="icon-comment"></i>
+                          <span>24</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="blog-card-wrap">
+                <div class="blog-card">
+                  <div class="blog-card__date">04.11.2020</div>
+                  <div class="blog-card__title">
+                    <a href="#"> Как CMS влияют на стоимость разработки </a>
+                  </div>
+                  <div class="blog-card__image-wrap">
+                    <a href="#">
+                      <img
+                        src="assets/blog1.png"
+                        alt="pic"
+                        class="blog-card__image"
+                      />
+                    </a>
+                  </div>
+                  <div class="blog-card__meta">
+                    <div class="blog-card__meta-item-wrap">
+                      <a href="#">
+                        <div class="blog-card__meta-item">
+                          <i class="icon-comment"></i>
+                          <span>24</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="blog-card-wrap">
+                <div class="blog-card">
+                  <div class="blog-card__date">04.11.2020</div>
+                  <div class="blog-card__title">
+                    <a href="#"> Как CMS влияют на стоимость разработки </a>
+                  </div>
+                  <div class="blog-card__image-wrap">
+                    <a href="#">
+                      <img
+                        src="assets/blog1.png"
+                        alt="pic"
+                        class="blog-card__image"
+                      />
+                    </a>
+                  </div>
+                  <div class="blog-card__meta">
+                    <div class="blog-card__meta-item-wrap">
+                      <a href="#">
+                        <div class="blog-card__meta-item">
+                          <i class="icon-comment"></i>
+                          <span>24</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="blog-card-wrap">
+                <div class="blog-card">
+                  <div class="blog-card__date">04.11.2020</div>
+                  <div class="blog-card__title">
+                    <a href="#"> Как CMS влияют на стоимость разработки </a>
+                  </div>
+                  <div class="blog-card__image-wrap">
+                    <a href="#">
+                      <img
+                        src="assets/blog1.png"
+                        alt="pic"
+                        class="blog-card__image"
+                      />
+                    </a>
+                  </div>
+                  <div class="blog-card__meta">
+                    <div class="blog-card__meta-item-wrap">
+                      <a href="#">
+                        <div class="blog-card__meta-item">
+                          <i class="icon-comment"></i>
+                          <span>24</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="blog-card-wrap">
+                <div class="blog-card">
+                  <div class="blog-card__date">04.11.2020</div>
+                  <div class="blog-card__title">
+                    <a href="#"> Как CMS влияют на стоимость разработки </a>
+                  </div>
+                  <div class="blog-card__image-wrap">
+                    <a href="#">
+                      <img
+                        src="assets/blog1.png"
+                        alt="pic"
+                        class="blog-card__image"
+                      />
+                    </a>
+                  </div>
+                  <div class="blog-card__meta">
+                    <div class="blog-card__meta-item-wrap">
+                      <a href="#">
+                        <div class="blog-card__meta-item">
+                          <i class="icon-comment"></i>
+                          <span>24</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="blog-card-wrap">
+                <div class="blog-card">
+                  <div class="blog-card__date">04.11.2020</div>
+                  <div class="blog-card__title">
+                    <a href="#"> Как CMS влияют на стоимость разработки </a>
+                  </div>
+                  <div class="blog-card__image-wrap">
+                    <a href="#">
+                      <img
+                        src="assets/blog1.png"
+                        alt="pic"
+                        class="blog-card__image"
+                      />
+                    </a>
+                  </div>
+                  <div class="blog-card__meta">
+                    <div class="blog-card__meta-item-wrap">
+                      <a href="#">
+                        <div class="blog-card__meta-item">
+                          <i class="icon-comment"></i>
+                          <span>24</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section--accent overflow-hidden">
         <div class="container">
           <div class="section__header">
             <h2 class="section__title">Готовые решения</h2>
-            <a href="#" class="section__header-details-btn"> Все решения </a>
+            <a href="#" class="section__header-details-btn">
+              <span>Все решения</span>
+              <i class="icon-arrow"></i>
+            </a>
           </div>
-          <div>slider</div>
+          <div class="content-swiper-wrap">
+            <div
+              class="content-swiper swiper-container"
+              data-slides-per-view-lg="3"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="solution-card-wrap">
+                    <div class="solution-card">
+                      <div class="solution-card__tag-wrap dd-tag-wrap">
+                        <div class="solution-card__tag dd-tag dd-tag--gray">
+                          .pdf
+                        </div>
+                      </div>
+                      <div class="solution-card__title">
+                        Где взять клиентов на торты на заказ?
+                      </div>
+                      <div class="solution-card__text">
+                        За помощью с сайтом ко мне обратился владелец ателье,
+                        занимающегося пошивом собственных линеек женского
+                        нижнего белья...
+                      </div>
+                      <div class="solution-card__footer">
+                        <div class="solution-card__price">300 ₽</div>
+                        <a
+                          href="#"
+                          class="
+                            solution-card__details-btn
+                            dd-button dd-button--small
+                          "
+                        >
+                          Подробнее
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="solution-card-wrap">
+                    <div class="solution-card">
+                      <div class="solution-card__tag-wrap dd-tag-wrap">
+                        <div class="solution-card__tag dd-tag dd-tag--gray">
+                          .pdf
+                        </div>
+                      </div>
+                      <div class="solution-card__title">
+                        Где взять клиентов на торты на заказ?
+                      </div>
+                      <div class="solution-card__text">
+                        За помощью с сайтом ко мне обратился владелец ателье,
+                        занимающегося пошивом собственных линеек женского
+                        нижнего белья...
+                      </div>
+                      <div class="solution-card__footer">
+                        <div class="solution-card__price">300 ₽</div>
+                        <a
+                          href="#"
+                          class="
+                            solution-card__details-btn
+                            dd-button dd-button--small
+                          "
+                        >
+                          Подробнее
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="solution-card-wrap">
+                    <div class="solution-card">
+                      <div class="solution-card__tag-wrap dd-tag-wrap">
+                        <div class="solution-card__tag dd-tag dd-tag--gray">
+                          .pdf
+                        </div>
+                      </div>
+                      <div class="solution-card__title">
+                        Где взять клиентов на торты на заказ?
+                      </div>
+                      <div class="solution-card__text">
+                        За помощью с сайтом ко мне обратился владелец ателье,
+                        занимающегося пошивом собственных линеек женского
+                        нижнего белья...
+                      </div>
+                      <div class="solution-card__footer">
+                        <div class="solution-card__price">300 ₽</div>
+                        <a
+                          href="#"
+                          class="
+                            solution-card__details-btn
+                            dd-button dd-button--small
+                          "
+                        >
+                          Подробнее
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="solution-card-wrap">
+                    <div class="solution-card">
+                      <div class="solution-card__tag-wrap dd-tag-wrap">
+                        <div class="solution-card__tag dd-tag dd-tag--gray">
+                          .pdf
+                        </div>
+                      </div>
+                      <div class="solution-card__title">
+                        Где взять клиентов на торты на заказ?
+                      </div>
+                      <div class="solution-card__text">
+                        За помощью с сайтом ко мне обратился владелец ателье,
+                        занимающегося пошивом собственных линеек женского
+                        нижнего белья...
+                      </div>
+                      <div class="solution-card__footer">
+                        <div class="solution-card__price">300 ₽</div>
+                        <a
+                          href="#"
+                          class="
+                            solution-card__details-btn
+                            dd-button dd-button--small
+                          "
+                        >
+                          Подробнее
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="solution-card-wrap">
+                    <div class="solution-card">
+                      <div class="solution-card__tag-wrap dd-tag-wrap">
+                        <div class="solution-card__tag dd-tag dd-tag--gray">
+                          .pdf
+                        </div>
+                      </div>
+                      <div class="solution-card__title">
+                        Где взять клиентов на торты на заказ?
+                      </div>
+                      <div class="solution-card__text">
+                        За помощью с сайтом ко мне обратился владелец ателье,
+                        занимающегося пошивом собственных линеек женского
+                        нижнего белья...
+                      </div>
+                      <div class="solution-card__footer">
+                        <div class="solution-card__price">300 ₽</div>
+                        <a
+                          href="#"
+                          class="
+                            solution-card__details-btn
+                            dd-button dd-button--small
+                          "
+                        >
+                          Подробнее
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-custom-btn-prev">
+              <i class="icon-arrow"></i>
+            </div>
+            <div class="swiper-custom-btn-next">
+              <i class="icon-arrow"></i>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section overflow-hidden">
         <div class="container">
           <div class="section__header">
             <h2 class="section__title">Дипломы</h2>
-            <a href="#" class="section__header-details-btn"> Дипломы </a>
+            <a href="#" class="section__header-details-btn">
+              <span>Дипломы</span>
+              <i class="icon-arrow"></i>
+            </a>
           </div>
-          <div>slider</div>
+          <div class="content-swiper-wrap shadow-fix">
+            <div
+              class="content-swiper swiper-container"
+              data-slides-per-view-lg="3"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="certificate-card-wrap">
+                    <a href="#">
+                      <div class="certificate-card">
+                        <div class="certificate-card__image-wrap">
+                          <img
+                            src="assets/cert1.png"
+                            alt="pic"
+                            class="certificate-card__image"
+                          />
+                        </div>
+                        <div class="certificate-card__content">
+                          <div class="certificate-card__title">
+                            Работа менеджера в amoCRM от amoAcademy
+                          </div>
+                          <div class="certificate-card__date">04.11.2020</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="certificate-card-wrap">
+                    <a href="#">
+                      <div class="certificate-card">
+                        <div class="certificate-card__image-wrap">
+                          <img
+                            src="assets/cert1.png"
+                            alt="pic"
+                            class="certificate-card__image"
+                          />
+                        </div>
+                        <div class="certificate-card__content">
+                          <div class="certificate-card__title">
+                            Работа менеджера в amoCRM от amoAcademy
+                          </div>
+                          <div class="certificate-card__date">04.11.2020</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="certificate-card-wrap">
+                    <a href="#">
+                      <div class="certificate-card">
+                        <div class="certificate-card__image-wrap">
+                          <img
+                            src="assets/cert1.png"
+                            alt="pic"
+                            class="certificate-card__image"
+                          />
+                        </div>
+                        <div class="certificate-card__content">
+                          <div class="certificate-card__title">
+                            Работа менеджера в amoCRM от amoAcademy
+                          </div>
+                          <div class="certificate-card__date">04.11.2020</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="certificate-card-wrap">
+                    <a href="#">
+                      <div class="certificate-card">
+                        <div class="certificate-card__image-wrap">
+                          <img
+                            src="assets/cert1.png"
+                            alt="pic"
+                            class="certificate-card__image"
+                          />
+                        </div>
+                        <div class="certificate-card__content">
+                          <div class="certificate-card__title">
+                            Работа менеджера в amoCRM от amoAcademy
+                          </div>
+                          <div class="certificate-card__date">04.11.2020</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="certificate-card-wrap">
+                    <a href="#">
+                      <div class="certificate-card">
+                        <div class="certificate-card__image-wrap">
+                          <img
+                            src="assets/cert1.png"
+                            alt="pic"
+                            class="certificate-card__image"
+                          />
+                        </div>
+                        <div class="certificate-card__content">
+                          <div class="certificate-card__title">
+                            Работа менеджера в amoCRM от amoAcademy
+                          </div>
+                          <div class="certificate-card__date">04.11.2020</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-custom-btn-prev">
+              <i class="icon-arrow"></i>
+            </div>
+            <div class="swiper-custom-btn-next">
+              <i class="icon-arrow"></i>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+          </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
           <h2 class="section__title">Моя история</h2>
-          <div>slider</div>
+          <div class="dd-timeline-wrap">
+            <ul class="dd-timeline">
+              <li class="dd-timeline__item">
+                <div class="dd-timeline__item-dot"></div>
+                <div class="dd-timeline__item-content-wrap">
+                  <div class="dd-timeline__item-content-line"></div>
+                  <ul class="dd-timeline__item-content">
+                    <li>Регистрация домена fladex.ru, старт блога;</li>
+                    <li>Фриланс по форумному движку phpBB;</li>
+                    <li>Регистрация на SEO-форумах SearchEngines и MaulTalk;</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="dd-timeline__item">
+                <div class="dd-timeline__item-dot"></div>
+                <div class="dd-timeline__item-content-wrap">
+                  <div class="dd-timeline__item-content-line"></div>
+                  <ul class="dd-timeline__item-content">
+                    <li>Регистрация домена fladex.ru, старт блога;</li>
+                    <li>Фриланс по форумному движку phpBB;</li>
+                    <li>Регистрация на SEO-форумах SearchEngines и MaulTalk;</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="dd-timeline__item">
+                <div class="dd-timeline__item-dot"></div>
+                <div class="dd-timeline__item-content-wrap">
+                  <div class="dd-timeline__item-content-line"></div>
+                  <ul class="dd-timeline__item-content">
+                    <li>Регистрация домена fladex.ru, старт блога;</li>
+                    <li>Фриланс по форумному движку phpBB;</li>
+                    <li>Регистрация на SEO-форумах SearchEngines и MaulTalk;</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="dd-timeline__item">
+                <div class="dd-timeline__item-dot"></div>
+                <div class="dd-timeline__item-content-wrap">
+                  <div class="dd-timeline__item-content-line"></div>
+                  <ul class="dd-timeline__item-content">
+                    <li>Регистрация домена fladex.ru, старт блога;</li>
+                    <li>Фриланс по форумному движку phpBB;</li>
+                    <li>Регистрация на SEO-форумах SearchEngines и MaulTalk;</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="dd-timeline__item">
+                <div class="dd-timeline__item-dot"></div>
+                <div class="dd-timeline__item-content-wrap">
+                  <div class="dd-timeline__item-content-line"></div>
+                  <ul class="dd-timeline__item-content">
+                    <li>Регистрация домена fladex.ru, старт блога;</li>
+                    <li>Фриланс по форумному движку phpBB;</li>
+                    <li>Регистрация на SEO-форумах SearchEngines и MaulTalk;</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
           <h2 class="section__title">Инвестирование</h2>
           <div class="row">
-            <div class="col-md-8">table</div>
-            <div class="col-md-4">form</div>
+            <div class="col-lg-10">
+              <div class="mbp-lg-60">
+                <p>
+                  Часть своих денег я инвестирую в долларовые акции. Так как
+                  работаю в сфере маркетинга, то и компании выбрал из этого
+                  сегмента — потому что знаю, какие у них сейчас позиции на
+                  рынке. Вот мой портфель:
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="table-responsive dd-table-wrap">
+                <table class="table table-borderless dd-table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="dd-table__corp-cell">
+                          <div class="dd-table__corp-cell-img-wrap">
+                            <img
+                              src="assets/corp_fb.png"
+                              alt="pic"
+                              class="dd-table__corp-cell-img"
+                            />
+                          </div>
+                          <div class="dd-table__corp-cell-content">
+                            <div class="dd-table__corp-cell-title">
+                              Facebook, Inc. Class A Common
+                            </div>
+                            <div class="dd-table__corp-cell-subtitle">FB</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="dd-table__prices">
+                          <div class="dd-table__prices-start">$ 222.22</div>
+                          <div class="dd-table__prices-arrow-wrap">
+                            <i class="icon-arrow"></i>
+                          </div>
+                          <div class="dd-table__prices-end">$ 376.26</div>
+                        </div>
+                      </td>
+                      <td><div class="dd-table__result">+ 69,31%</div class="dd-table__result"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="dd-table__corp-cell">
+                          <div class="dd-table__corp-cell-img-wrap">
+                            <img
+                              src="assets/corp_apple.png"
+                              alt="pic"
+                              class="dd-table__corp-cell-img"
+                            />
+                          </div>
+                          <div class="dd-table__corp-cell-content">
+                            <div class="dd-table__corp-cell-title">
+                              Facebook, Inc. Class A Common
+                            </div>
+                            <div class="dd-table__corp-cell-subtitle">FB</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="dd-table__prices">
+                          <div class="dd-table__prices-start">$ 222.22</div>
+                          <div class="dd-table__prices-arrow-wrap">
+                            <i class="icon-arrow"></i>
+                          </div>
+                          <div class="dd-table__prices-end">$ 376.26</div>
+                        </div>
+                      </td>
+                      <td><div class="dd-table__result">+ 69,31%</div class="dd-table__result"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="dd-table__corp-cell">
+                          <div class="dd-table__corp-cell-img-wrap">
+                            <img
+                              src="assets/corp_google.png"
+                              alt="pic"
+                              class="dd-table__corp-cell-img"
+                            />
+                          </div>
+                          <div class="dd-table__corp-cell-content">
+                            <div class="dd-table__corp-cell-title">
+                              Facebook, Inc. Class A Common
+                            </div>
+                            <div class="dd-table__corp-cell-subtitle">FB</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="dd-table__prices">
+                          <div class="dd-table__prices-start">$ 222.22</div>
+                          <div class="dd-table__prices-arrow-wrap">
+                            <i class="icon-arrow"></i>
+                          </div>
+                          <div class="dd-table__prices-end">$ 376.26</div>
+                        </div>
+                      </td>
+                      <td><div class="dd-table__result">+ 69,31%</div class="dd-table__result"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="dd-table__corp-cell">
+                          <div class="dd-table__corp-cell-img-wrap">
+                            <img
+                              src="assets/corp_ms.png"
+                              alt="pic"
+                              class="dd-table__corp-cell-img"
+                            />
+                          </div>
+                          <div class="dd-table__corp-cell-content">
+                            <div class="dd-table__corp-cell-title">
+                              Facebook, Inc. Class A Common
+                            </div>
+                            <div class="dd-table__corp-cell-subtitle">FB</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="dd-table__prices">
+                          <div class="dd-table__prices-start">$ 222.22</div>
+                          <div class="dd-table__prices-arrow-wrap">
+                            <i class="icon-arrow"></i>
+                          </div>
+                          <div class="dd-table__prices-end">$ 376.26</div>
+                        </div>
+                      </td>
+                      <td><div class="dd-table__result">+ 69,31%</div class="dd-table__result"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="contact-form-wrap">
+                <form action="/" class="contact-form">
+                  <div class="contact-form__title">Хотите так же?</div>
+                  <div class="contact-form__subtitle">
+                    Запишитесь на бесплатную консультацию.
+                  </div>
+                  <div class="dd-input-wrap">
+                    <input
+                      type="text"
+                      placeholder="Имя"
+                      name="Имя"
+                      class="dd-input"
+                      autocomplete="name"
+                    />
+                  </div>
+                  <div class="dd-input-wrap">
+                    <input
+                      type="tel"
+                      placeholder="Телефон"
+                      name="Телефон"
+                      class="dd-input"
+                      autocomplete="tel"
+                    />
+                  </div>
+                  <div class="dd-button-wrap">
+                    <button type="submit" class="dd-button">
+                      Оставить заявку
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section--accent">
         <div class="container">
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-lg-7">
               <h2 class="section__title text-left">Стикеры в Telegram</h2>
               <p>
                 Я сделал тематический набор стикеров для телеграм. В нём есть
@@ -179,55 +1170,432 @@
                 <a href="#" class="dd-button dd-button--accent">Скачать себе</a>
               </div>
             </div>
-            <div class="col-md-5">img</div>
+            <div class="col-lg-5">
+              <img src="assets/stickers.png" alt="pic" class="section__content-image" />
+            </div>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
           <div class="row">
-            <div class="col-md-8">
-              <h2 class="section__title text-left">Реклама в блоге</h2>
+            <div class="col-lg-8">
+              <h2 class="section__title text-left mbp-lg-30">
+                Реклама в блоге
+              </h2>
               <p>
                 Рассматриваю варианты по размещению рекламы в блоге. Для
                 потенциальных рекламодателей я предлагаю доступ к аудитории
                 вебмастеров, лидгенщиков, SEO-специалистов. К вашим услугам
                 следующие площадки:
               </p>
-              <div>socials</div>
+              <div class="socials-info-wrap">
+                <div class="socials-info">
+                  <div class="socials-info__item-wrap">
+                    <a href="#" target="_blank">
+                      <div class="socials-info__item">
+                        <div class="socials-info__item-icon-wrap">
+                          <img
+                            src="assets/vk.svg"
+                            alt="vk"
+                            class="socials-info__item-icon"
+                          />
+                        </div>
+                        <div class="socials-info__item-content">
+                          <div class="socials-info__item-title">ВКонтакте</div>
+                          <div class="socials-info__item-subtitle">
+                            1426 подписчиков
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="socials-info__item-wrap">
+                    <a href="#" target="_blank">
+                      <div class="socials-info__item">
+                        <div class="socials-info__item-icon-wrap">
+                          <img
+                            src="assets/tg.svg"
+                            alt="tg"
+                            class="socials-info__item-icon"
+                          />
+                        </div>
+                        <div class="socials-info__item-content">
+                          <div class="socials-info__item-title">Telegram</div>
+                          <div class="socials-info__item-subtitle">
+                            678 подписчиков
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="socials-info__item-wrap">
+                    <a href="#" target="_blank">
+                      <div class="socials-info__item">
+                        <div class="socials-info__item-icon-wrap">
+                          <img
+                            src="assets/fb.svg"
+                            alt="fb"
+                            class="socials-info__item-icon"
+                          />
+                        </div>
+                        <div class="socials-info__item-content">
+                          <div class="socials-info__item-title">Facebook</div>
+                          <div class="socials-info__item-subtitle">
+                            131 подписчиков
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="socials-info__item-wrap">
+                    <a href="#" target="_blank">
+                      <div class="socials-info__item">
+                        <div class="socials-info__item-icon-wrap">
+                          <img
+                            src="assets/youtube.svg"
+                            alt="youtube"
+                            class="socials-info__item-icon"
+                          />
+                        </div>
+                        <div class="socials-info__item-content">
+                          <div class="socials-info__item-title">YouTube</div>
+                          <div class="socials-info__item-subtitle">
+                            14 подписчиков
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="socials-info__item-wrap">
+                    <a href="#" target="_blank">
+                      <div class="socials-info__item">
+                        <div class="socials-info__item-icon-wrap">
+                          <img
+                            src="assets/inst.svg"
+                            alt="inst"
+                            class="socials-info__item-icon"
+                          />
+                        </div>
+                        <div class="socials-info__item-content">
+                          <div class="socials-info__item-title">Instagram</div>
+                          <div class="socials-info__item-subtitle">
+                            612 подписчиков
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="socials-info__item-wrap">
+                    <a href="#" target="_blank">
+                      <div class="socials-info__item">
+                        <div class="socials-info__item-icon-wrap">
+                          <img
+                            src="assets/ok.svg"
+                            alt="ok"
+                            class="socials-info__item-icon"
+                          />
+                        </div>
+                        <div class="socials-info__item-content">
+                          <div class="socials-info__item-title">
+                            Одноклассники
+                          </div>
+                          <div class="socials-info__item-subtitle">
+                            2 подписчика
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4">form</div>
+            <div class="col-lg-4">
+              <div class="contact-form-wrap mtp-md-32">
+                <form action="/" class="contact-form">
+                  <div class="contact-form__title">Обсудим размещение?</div>
+                  <div class="contact-form__subtitle">
+                    Запишитесь на бесплатную консультацию.
+                  </div>
+                  <div class="dd-input-wrap">
+                    <input
+                      type="text"
+                      placeholder="Имя"
+                      name="Имя"
+                      class="dd-input"
+                      autocomplete="name"
+                    />
+                  </div>
+                  <div class="dd-input-wrap">
+                    <input
+                      type="tel"
+                      placeholder="Телефон"
+                      name="Телефон"
+                      class="dd-input"
+                      autocomplete="tel"
+                    />
+                  </div>
+                  <div class="dd-button-wrap">
+                    <button type="submit" class="dd-button">
+                      Оставить заявку
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-xl-8 mb-5 mb-xl-0">
               <h2 class="section__title text-left">Отзывы</h2>
-              <div>comments</div>
+              <div class="home-reviews-wrap">
+                <div class="home-reviews">
+                  <div class="home-reviews-item">
+                    <div class="home-reviews-item__title">
+                      <span>Ruslan Galimov</span>
+                      <img src="assets/vk.svg" alt="vk" />
+                    </div>
+                    <div class="home-reviews-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-reviews-item__details-btn-wrap">
+                      <a href="#" class="home-reviews-item__details-btn">
+                        <span>Читать полный отзыв</span>
+                        <i class="icon-arrow"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="home-reviews-item">
+                    <div class="home-reviews-item__title">
+                      <span>Ruslan Galimov</span>
+                      <img src="assets/vk.svg" alt="vk" />
+                    </div>
+                    <div class="home-reviews-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-reviews-item__details-btn-wrap">
+                      <a href="#" class="home-reviews-item__details-btn">
+                        <span>Читать полный отзыв</span>
+                        <i class="icon-arrow"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="home-reviews-item">
+                    <div class="home-reviews-item__title">
+                      <span>Ruslan Galimov</span>
+                      <img src="assets/vk.svg" alt="vk" />
+                    </div>
+                    <div class="home-reviews-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-reviews-item__details-btn-wrap">
+                      <a href="#" class="home-reviews-item__details-btn">
+                        <span>Читать полный отзыв</span>
+                        <i class="icon-arrow"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="home-reviews-item">
+                    <div class="home-reviews-item__title">
+                      <span>Ruslan Galimov</span>
+                      <img src="assets/vk.svg" alt="vk" />
+                    </div>
+                    <div class="home-reviews-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-reviews-item__details-btn-wrap">
+                      <a href="#" class="home-reviews-item__details-btn">
+                        <span>Читать полный отзыв</span>
+                        <i class="icon-arrow"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="home-reviews-item">
+                    <div class="home-reviews-item__title">
+                      <span>Ruslan Galimov</span>
+                      <img src="assets/vk.svg" alt="vk" />
+                    </div>
+                    <div class="home-reviews-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-reviews-item__details-btn-wrap">
+                      <a href="#" class="home-reviews-item__details-btn">
+                        <span>Читать полный отзыв</span>
+                        <i class="icon-arrow"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="home-reviews-item">
+                    <div class="home-reviews-item__title">
+                      <span>Ruslan Galimov</span>
+                      <img src="assets/vk.svg" alt="vk" />
+                    </div>
+                    <div class="home-reviews-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-reviews-item__details-btn-wrap">
+                      <a href="#" class="home-reviews-item__details-btn">
+                        <span>Читать полный отзыв</span>
+                        <i class="icon-arrow"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4">
               <h2 class="section__title text-left">Комментарии</h2>
-              <div>comments</div>
+              <div class="home-comments-wrap">
+                <div class="home-comments">
+                  <div class="home-comments-item">
+                    <div class="home-comments-item__title">
+                      <!-- <img src="assets/sample.png" alt="pic" class="img"> -->
+                      <span class="char">D</span>
+                      <span class="name">DGNZ</span>
+                      <span class="date">2 нед</span>
+                    </div>
+                    <div class="home-comments-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-comments-item__details-btn-wrap">
+                      <a href="#" class="home-comments-item__details-btn">
+                        Почему вебмастерам нужно переходить...
+                      </a>
+                    </div>
+                  </div>
+                  <div class="home-comments-item">
+                    <div class="home-comments-item__title">
+                       <!-- <img src="assets/sample.png" alt="pic" class="img"> -->
+                      <span class="char">D</span>
+                      <span class="name">DGNZ</span>
+                      <span class="date">2 нед</span>
+                    </div>
+                    <div class="home-comments-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-comments-item__details-btn-wrap">
+                      <a href="#" class="home-comments-item__details-btn">
+                        Почему вебмастерам нужно переходить...
+                      </a>
+                    </div>
+                  </div>
+                  <div class="home-comments-item">
+                    <div class="home-comments-item__title">
+                       <!-- <img src="assets/sample.png" alt="pic" class="img"> -->
+                      <span class="char">D</span>
+                      <span class="name">DGNZ</span>
+                      <span class="date">2 нед</span>
+                    </div>
+                    <div class="home-comments-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-comments-item__details-btn-wrap">
+                      <a href="#" class="home-comments-item__details-btn">
+                        Почему вебмастерам нужно переходить...
+                      </a>
+                    </div>
+                  </div>
+                  <div class="home-comments-item">
+                    <div class="home-comments-item__title">
+                       <!-- <img src="assets/sample.png" alt="pic" class="img"> -->
+                      <span class="char">D</span>
+                      <span class="name">DGNZ</span>
+                      <span class="date">2 нед</span>
+                    </div>
+                    <div class="home-comments-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-comments-item__details-btn-wrap">
+                      <a href="#" class="home-comments-item__details-btn">
+                        Почему вебмастерам нужно переходить...
+                      </a>
+                    </div>
+                  </div>
+                  <div class="home-comments-item">
+                    <div class="home-comments-item__title">
+                       <!-- <img src="assets/sample.png" alt="pic" class="img"> -->
+                      <span class="char">D</span>
+                      <span class="name">DGNZ</span>
+                      <span class="date">2 нед</span>
+                    </div>
+                    <div class="home-comments-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-comments-item__details-btn-wrap">
+                      <a href="#" class="home-comments-item__details-btn">
+                        Почему вебмастерам нужно переходить...
+                      </a>
+                    </div>
+                  </div>
+                  <div class="home-comments-item">
+                    <div class="home-comments-item__title">
+                       <!-- <img src="assets/sample.png" alt="pic" class="img"> -->
+                      <span class="char">D</span>
+                      <span class="name">DGNZ</span>
+                      <span class="date">2 нед</span>
+                    </div>
+                    <div class="home-comments-item__content">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Impedit, veritatis beatae laudantium animi tempore
+                      voluptate ipsa in rem est recusandae!
+                    </div>
+                    <div class="home-comments-item__details-btn-wrap">
+                      <a href="#" class="home-comments-item__details-btn">
+                        Почему вебмастерам нужно переходить...
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
-          <div class="row">
-            <div class="col-md-7">
+          <div class="row align-items-center">
+            <div class="col-6 col-lg-7">
               <h2 class="section__title text-left">Mozilla Foundation</h2>
-              <p>
-                Я поддерживаю Mozilla Foundation. Скачайте браузер Firefox от
-                некоммерческой организации Mozilla. Почему это важно?
-              </p>
-              <div>
+              <div class="w-100 w-md-60">
+                <p>
+                  Я поддерживаю Mozilla Foundation. <br />
+                  Скачайте браузер Firefox от некоммерческой организации
+                  Mozilla.
+                  <a href="#">Почему это важно?</a>
+                </p>
+              </div>
+              <div class="mt-5">
                 <a href="#" class="dd-button dd-button--accent"> Скачать </a>
               </div>
             </div>
-            <div class="col-md-5">img</div>
+            <div class="col-6 col-lg-5">
+              <img src="assets/mozilla.png" alt="pic" />
+            </div>
           </div>
         </div>
       </section>
@@ -236,6 +1604,7 @@
     <!-- contents of html partials will be injected here -->
     <!-- endinject -->
     <script src="js/components.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>
