@@ -235,7 +235,7 @@ a {
 
   color: var(--color-text);
 
-  min-width: 680px;
+  min-width: 540px;
 
   thead {
     th {
@@ -317,7 +317,7 @@ a {
   padding-bottom: 36px; // 46 - nav bottom margin
   background: #ffffff;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.05);
-  transition: 400ms;
+  // transition: 400ms;
 
   &__top {
     display: flex;
@@ -355,7 +355,7 @@ a {
       text-decoration: none;
       color: inherit;
 
-      transition: 400ms;
+      // transition: 400ms;
     }
   }
 
@@ -394,8 +394,11 @@ a {
       margin-bottom: 0.625rem;
     }
     &-link {
-      color: var(--color-text) !important;
-      text-decoration: none !important;
+      color: var(--color-text);
+      &:hover {
+        color: var(--color-accent);
+        text-decoration: none;
+      }
     }
   }
 
@@ -465,7 +468,7 @@ a {
     padding: 20px 15px;
     &-header {
       display: flex;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     &-close-btn {
       background: none;
@@ -475,15 +478,18 @@ a {
 
     .main-header__nav-wrap {
       overflow: hidden;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
     .main-header__nav-menu-item {
       width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
     }
 
     .main-header__socials-wrap {
       overflow: hidden;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
     .main-header__socials-item {
       img {
@@ -582,7 +588,7 @@ a {
       color: var(--color-text);
       &:hover {
         text-decoration: none;
-        color: var(--color-text);
+        color: var(--color-accent);
       }
     }
   }
@@ -755,9 +761,19 @@ a {
       position: absolute;
       right: 0;
       text-decoration: none;
+
       i {
         font-size: 10px;
         margin-left: 8px;
+
+        display: inline-block;
+        transition: 400ms;
+      }
+
+      &:hover {
+        i {
+          transform: translateX(8px);
+        }
       }
     }
   }
@@ -778,7 +794,7 @@ a {
   min-height: 410px;
 
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
 
   &__breadcrumb {
@@ -896,6 +912,8 @@ a {
   height: 46px;
   border-radius: 50%;
 
+  transition: 200ms;
+
   i {
     font-size: 8px;
     margin-left: -14px;
@@ -904,6 +922,8 @@ a {
 
   transition: 200ms;
   &:hover {
+    filter: drop-shadow(0px 8px 26px rgba(43, 45, 51, 0.1));
+
     i {
       color: var(--color-accent-alt);
     }
@@ -930,6 +950,8 @@ a {
   height: 46px;
   border-radius: 50%;
 
+  transition: 200ms;
+
   i {
     font-size: 8px;
     margin-left: 14px;
@@ -939,6 +961,8 @@ a {
 
   transition: 200ms;
   &:hover {
+    filter: drop-shadow(0px 8px 26px rgba(43, 45, 51, 0.1));
+
     i {
       color: var(--color-accent-alt);
     }
@@ -969,7 +993,7 @@ a {
 
   transition: 200ms;
   &:hover {
-    box-shadow: 4px 8px 9px rgba(43, 45, 51, 0.14);
+    box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
 
     .service-cover-card__title {
       color: var(--color-accent);
@@ -1022,6 +1046,7 @@ a {
 }
 .service-card {
   height: 100%;
+  min-height: 240px;
 
   padding: 2.5rem 1.25rem;
   padding-bottom: 1.875rem;
@@ -1072,12 +1097,18 @@ a {
   background: #ffffff;
   border-radius: 6px;
 
+  transition: 400ms;
+  &:hover {
+    box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
+  }
+
   &__image-wrap {
   }
   &__image {
     object-fit: cover;
     width: 100%;
     height: 198px;
+    border-radius: 6px 6px 0 0;
   }
 
   &__content {
@@ -1106,6 +1137,7 @@ a {
 
 .article-card-wrap {
   height: 100%;
+  padding-bottom: 1.25rem;
 }
 .article-card {
   height: 100%;
@@ -1116,6 +1148,11 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 295px;
+
+  transition: 400ms;
+  &:hover {
+    box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
+  }
 
   &__tag-wrap {
     margin-bottom: 1.25rem;
@@ -1177,6 +1214,10 @@ a {
 
 .blog-card-wrap {
   margin-bottom: 1.5rem;
+
+  a {
+    text-decoration: none !important;
+  }
 }
 .blog-card {
   padding-top: 1.25rem;
@@ -1185,6 +1226,11 @@ a {
   background: #ffffff;
   box-shadow: 0.25rem 0.25rem 1.75rem 0.1875rem rgba(0, 0, 0, 0.08);
   border-radius: 6px;
+
+  transition: 400ms;
+  &:hover {
+    box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
+  }
 
   &__date {
     padding-left: 1.25rem;
@@ -1261,12 +1307,18 @@ a {
 }
 
 .solution-card-wrap {
+  padding-bottom: 1.25rem;
 }
 .solution-card {
   background: var(--color-background);
   border-radius: 6px;
 
   padding: 1.5rem;
+
+  transition: 400ms;
+  &:hover {
+    box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
+  }
 
   &__tag-wrap {
     margin-bottom: 1.5rem;
@@ -1315,6 +1367,11 @@ a {
   // box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.08);
   box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.08);
   border-radius: 6px;
+
+  transition: 400ms;
+  &:hover {
+    box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
+  }
 
   &__image-wrap {
     border-bottom: 1px solid #e7e7e7;
@@ -1577,6 +1634,9 @@ a {
   .dd-input {
     width: 100%;
   }
+  .dd-textarea {
+    resize: none;
+  }
   .dd-button {
     width: 100%;
     margin-top: 1.5rem;
@@ -1717,8 +1777,8 @@ a {
     &-content {
       font-style: normal;
       font-weight: normal;
-      font-size: 0.875rem;
-      line-height: 1rem;
+      font-size: 14px;
+      line-height: 16px;
 
       color: var(--color-text);
 
@@ -1764,7 +1824,18 @@ a {
       }
     }
 
+    &:last-child {
+      &::before {
+        width: 650px;
+      }
+    }
+
     &.active {
+      &:last-child {
+        &::after {
+          width: 650px;
+        }
+      }
       &::after {
         width: 270px;
       }
@@ -2107,6 +2178,11 @@ a {
   background: #ffffff;
   border-radius: 6px;
 
+  transition: 400ms;
+  &:hover {
+    box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
+  }
+
   &__header {
     padding: 1rem 1.5625rem;
     padding-top: 2.25rem;
@@ -2157,6 +2233,11 @@ a {
   background: #ffffff;
   box-shadow: 4px 4px 28px 3px rgba(0, 0, 0, 0.08);
   border-radius: 6px;
+
+  transition: 400ms;
+  &:hover {
+    box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
+  }
 
   &__header {
     padding: 1rem 1.5625rem;
@@ -2219,6 +2300,11 @@ a {
   padding: 36px 25px;
 
   text-align: center;
+
+  transition: 400ms;
+  &:hover {
+    box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
+  }
 
   &__title {
     font-style: normal;
@@ -2420,6 +2506,11 @@ a {
   padding-bottom: 3.25rem;
 
   height: 100%;
+
+  transition: 400ms;
+  &:hover {
+    box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
+  }
 
   &__icon-wrap {
     margin-bottom: 1rem;

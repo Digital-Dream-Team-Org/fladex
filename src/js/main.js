@@ -182,6 +182,29 @@
       });
     }
 
+    // Out of bound timeline container
+    let containerToRight =
+      $(window).outerWidth(true) -
+      ($(".container").offset().left + $(".container").outerWidth() - 0);
+    $(".out-of-bound-tl").css("margin-right", `-${containerToRight}px`);
+    $(".out-of-bound-tl").css("margin-left", `-${containerToRight}px`);
+    $(".out-of-bound-tl .dd-timeline").css(
+      "padding-left",
+      `${containerToRight}px`,
+    );
+    $(window).on("resize", function () {
+      containerToRight =
+        $(window).outerWidth(true) -
+        ($(".container").offset().left + $(".container").outerWidth() - 0);
+
+      $(".out-of-bound-tl").css("margin-right", `-${containerToRight}px`);
+      $(".out-of-bound-tl").css("margin-left", `-${containerToRight}px`);
+      $(".out-of-bound-tl .dd-timeline").css(
+        "padding-left",
+        `${containerToRight}px`,
+      );
+    });
+
     // Toggle mobile sliderbar
     $(".toggle-mobile-slidebar").on("click", function () {
       $("#slidebarContainer").addClass("active");
@@ -222,20 +245,24 @@
     }
 
     // sticky header
-    let headerStickyOffset = $(".main-header").height();
+    let headerStickyOffset = $(".main-header").innerHeight();
     if ($(".main-header").length) {
       if (window.pageYOffset > headerStickyOffset) {
         $(".main-header").addClass("sticky");
+        $("body").css("padding-top", `${headerStickyOffset}px`);
       } else {
         $(".main-header").removeClass("sticky");
+        $("body").css("padding-top", "");
       }
     }
     $(document).on("scroll", function () {
       if ($(".main-header").length) {
         if (window.pageYOffset > headerStickyOffset) {
           $(".main-header").addClass("sticky");
+          $("body").css("padding-top", `${headerStickyOffset}px`);
         } else {
           $(".main-header").removeClass("sticky");
+          $("body").css("padding-top", "");
         }
       }
     });
@@ -268,7 +295,7 @@
             nextEl: arrowNext,
             prevEl: arrowPrev,
           },
-          slidesPerView: 1,
+          slidesPerView: "auto",
           spaceBetween: 16,
           freeMode: false,
           updateOnWindowResize: true,

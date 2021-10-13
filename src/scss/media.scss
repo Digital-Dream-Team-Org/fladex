@@ -105,6 +105,15 @@
   .dd-table-wrap {
     margin-bottom: 1.875rem;
   }
+  .dd-table {
+    tr {
+      td {
+        &:first-child {
+          width: 290px;
+        }
+      }
+    }
+  }
 
   .article-card-wrap {
     height: 100%;
@@ -256,6 +265,10 @@
     }
   }
 
+  .service-card {
+    min-height: unset;
+  }
+
   .tarrif-heading-col {
     display: none;
   }
@@ -310,6 +323,15 @@
   // .swiper-custom-btn-next {
   //   right: 12px;
   // }
+
+  .content-swiper {
+    .swiper-wrapper {
+    }
+
+    .swiper-slide {
+      width: 90%;
+    }
+  }
 }
 @media (max-width: 576px) {
   .main-header {
