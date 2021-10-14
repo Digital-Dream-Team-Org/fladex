@@ -611,6 +611,11 @@ a {
       border-radius: 3px;
       width: 100%;
       object-fit: cover;
+
+      transition: 200ms;
+      &:hover {
+        box-shadow: 1px 2px 4px 0px rgba(43, 45, 51, 0.38);
+      }
     }
   }
 
@@ -667,6 +672,10 @@ a {
       color: var(--color-text);
       opacity: 0.7;
       padding: 0 6px;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
@@ -768,6 +777,7 @@ a {
 
         display: inline-block;
         transition: 400ms;
+        margin-right: 18px;
       }
 
       &:hover {
@@ -796,6 +806,7 @@ a {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
+  background-color: #00aaff;
 
   &__breadcrumb {
     margin-bottom: 1.25rem;
@@ -930,7 +941,7 @@ a {
   }
 
   &.swiper-button-disabled {
-    opacity: 0.5;
+    display: none;
   }
 }
 .swiper-custom-btn-prev {
@@ -969,7 +980,7 @@ a {
   }
 
   &.swiper-button-disabled {
-    opacity: 0.5;
+    display: none;
   }
 }
 
@@ -1152,6 +1163,13 @@ a {
   transition: 400ms;
   &:hover {
     box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
+    transition: 400ms;
+
+    .article-card__details-btn {
+      i {
+        transform: translateX(8px);
+      }
+    }
   }
 
   &__tag-wrap {
@@ -1208,6 +1226,8 @@ a {
     }
     i {
       font-size: 10px;
+      display: inline-block;
+      transition: 400ms;
     }
   }
 }
@@ -1265,9 +1285,9 @@ a {
     }
   }
   &__image-wrap {
+    margin-bottom: 1.375rem;
   }
   &__image {
-    margin-bottom: 1.75rem;
     width: 100%;
     height: 210px;
     object-fit: cover;
@@ -1288,6 +1308,8 @@ a {
       }
     }
     &-item {
+      padding: 6px 8px;
+      border-radius: 6px;
       font-style: normal;
       font-weight: 500;
       font-size: 1.125rem;
@@ -1297,6 +1319,11 @@ a {
 
       display: flex;
       align-items: flex-start;
+
+      transition: 400ms;
+      &:hover {
+        box-shadow: 3px 6px 8px rgba(43, 45, 51, 0.14);
+      }
 
       i {
         font-size: 20px;
@@ -1479,11 +1506,18 @@ a {
 
       &:hover {
         text-decoration: none;
+
+        i {
+          transform: translateX(8px);
+        }
       }
 
       i {
         font-size: 10px;
         margin-left: 0.75rem;
+
+        display: inline-block;
+        transition: 400ms;
       }
     }
   }
@@ -2018,12 +2052,19 @@ a {
 
         &:hover {
           text-decoration: none;
+
+          i {
+            transform: translateX(8px);
+          }
         }
 
         i {
           font-size: 8px;
           margin-left: 12px;
           margin-top: 2px;
+
+          display: inline-block;
+          transition: 400ms;
         }
       }
     }
@@ -2282,10 +2323,16 @@ a {
     i {
       margin-left: 12px;
       font-size: 10px;
+
+      display: inline-block;
+      transition: 400ms;
     }
 
     &:hover {
       text-decoration: none;
+      i {
+        transform: translateX(8px);
+      }
     }
   }
 }
@@ -2507,10 +2554,10 @@ a {
 
   height: 100%;
 
-  transition: 400ms;
-  &:hover {
-    box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
-  }
+  // transition: 400ms;
+  // &:hover {
+  //   box-shadow: 0.25rem 0.5rem 0.5625rem rgba(43, 45, 51, 0.14);
+  // }
 
   &__icon-wrap {
     margin-bottom: 1rem;
