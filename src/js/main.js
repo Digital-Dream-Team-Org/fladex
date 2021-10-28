@@ -1,6 +1,74 @@
 (function ($) {
   // Document ready
   $(function () {
+    // Ajax form submit / Аякс форма настраивается тут
+    $(".ajax-contact-form").on("submit", function (e) {
+      e.preventDefault();
+      const url = $(this).attr("action");
+      const method = $(this).attr("method");
+      const dataType = $(this).data("type") || null;
+      const serializedArray = $(this).serializeArray();
+      const self = $(this);
+
+      let requestObj = {};
+      serializedArray.forEach((item) => {
+        requestObj[item.name] = item.value;
+      });
+
+      $.ajax({
+        url,
+        type: method,
+        dataType: dataType,
+        data: {
+          ...requestObj,
+          // action: "ajaxForm",
+          // serialized,
+        },
+        success: function (data) {
+          // Clear inputs
+          self.find("input, textarea").val("");
+
+          // Open thanks popup
+          openSuccessPopup();
+        },
+        error: function (data) {
+          // Basic error handling
+          alert("Ошибка, повторите позднее");
+          console.error(data);
+        },
+      });
+    });
+
+    // popups
+    // contact popup
+    $(".open-contact-popup").on("click", function (e) {
+      e.preventDefault();
+      $("body").addClass("overflow-hidden");
+      $("#contactPopup").addClass("active");
+    });
+
+    // success popup
+    function openSuccessPopup() {
+      $(".overlay-cdk").removeClass("active");
+
+      $("body").addClass("overflow-hidden");
+      $("#successPopup").addClass("active");
+    }
+
+    // Close overlay on outside click
+    $(".overlay-cdk").on("click", function (e) {
+      if (e.target !== e.currentTarget) return;
+
+      $(this).removeClass("active");
+      $("body").removeClass("overflow-hidden");
+    });
+
+    // Close overlay on button click
+    $(".overlay-cdk__close-btn").on("click", function (e) {
+      $(".overlay-cdk").removeClass("active");
+      $("body").removeClass("overflow-hidden");
+    });
+
     // timeline
     // set extra height for content
     if ($(".dd-timeline").length) {
@@ -209,7 +277,7 @@
     $(".toggle-mobile-slidebar").on("click", function () {
       $("#slidebarContainer").addClass("active");
       $("body").addClass("overflow-hidden");
-      $(".main-header .hamburger").addClass("is-active");
+      // $(".main-header .hamburger").addClass("is-active");
 
       $("#slidebarContainer").css({
         transition: 0,
@@ -231,7 +299,7 @@
       closeSlidebar();
     });
     function closeSlidebar() {
-      $(".main-header .hamburger").removeClass("is-active");
+      // $(".main-header .hamburger").removeClass("is-active");
 
       $("#slidebarContainer").css({
         transition: "400ms",
@@ -245,9 +313,10 @@
     }
 
     // sticky header
+    let stickyExtraOffset = 60;
     let headerStickyOffset = $(".main-header").innerHeight();
     if ($(".main-header").length) {
-      if (window.pageYOffset > headerStickyOffset) {
+      if (window.pageYOffset > headerStickyOffset - stickyExtraOffset) {
         $(".main-header").addClass("sticky");
         $("body").css("padding-top", `${headerStickyOffset}px`);
       } else {
@@ -257,7 +326,7 @@
     }
     $(document).on("scroll", function () {
       if ($(".main-header").length) {
-        if (window.pageYOffset > headerStickyOffset) {
+        if (window.pageYOffset > headerStickyOffset - stickyExtraOffset) {
           $(".main-header").addClass("sticky");
           $("body").css("padding-top", `${headerStickyOffset}px`);
         } else {

@@ -170,10 +170,52 @@
           class="overlay-cdk__image"
         />
       </div>
-      <div class="overlay-cdk__title">Title</div>
-      <div class="overlay-cdk__subtitle">Subtitle</div>
+      <div class="overlay-cdk__title">Спасибо за завявку</div>
+      <div class="overlay-cdk__subtitle">Я свяжусь с вами втечение 6 часов</div>
       <div class="overlay-cdk__footer">
         <a href="#" class="dd-button overlay-cdk__close-btn"> Отлично, жду </a>
+      </div>
+    </div>
+  </div>
+</noindex>
+<noindex>
+  <div id="contactPopup" class="overlay-cdk">
+    <div class="overlay-cdk__content">
+      <div class="overlay-cdk__contact-form-wrap">
+        <div class="overlay-cdk__small-title">Отправить заявку</div>
+        <div class="overlay-cdk__subtitle">
+          Оставьте заявку, и я свяжусь с вами в течение суток
+        </div>
+        <form
+          action="/"
+          method="POST"
+          class="overlay-cdk__contact-form ajax-contact-form"
+        >
+          <div class="dd-input-wrap">
+            <input
+              type="text"
+              placeholder="Имя"
+              name="Имя"
+              class="dd-input w-100"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="dd-input-wrap">
+            <input
+              type="tel"
+              placeholder="Телефон"
+              name="Телефон"
+              class="dd-input w-100"
+              autocomplete="tel"
+              required
+            />
+          </div>
+          <div class="dd-button-wrap">
+            <button type="submit" class="dd-button w-100">Отправить</button>
+          </div>
+          <input type="hidden" name="action" value="ajaxForm" />
+        </form>
       </div>
     </div>
   </div>
