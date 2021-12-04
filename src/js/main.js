@@ -379,6 +379,87 @@
         });
       });
     }
+
+    // Mouse follow animated avatar
+    var mft_timesPerSecond = 100; // how many times to fire the event per second
+    var mft_wait = false;
+    if ($(".mouse-follow-target").length) {
+      $(document).on("mousemove", function (e) {
+        if (!mft_wait) {
+          let $el = $(".mouse-follow-target");
+
+          if (!isInViewport($el[0])) {
+            return;
+          }
+
+          let width = $el.width();
+          let height = $el.height();
+          let width_half = width / 2;
+          let height_half = height / 2;
+
+          let rect = $el[0].getBoundingClientRect();
+          let x = e.clientX - rect.left - width_half; //x position within the element.
+          let y = e.clientY - rect.top - height_half; //y position within the element.
+
+          if (x >= -width_half && x <= width_half && y <= -height_half) {
+            // up
+
+            $(".mouse-follow-target__inner").removeClass("active");
+            $(".mouse-follow-target__inner-8").addClass("active");
+          } else if (x >= width_half && y <= -height_half) {
+            // up-right
+
+            $(".mouse-follow-target__inner").removeClass("active");
+            $(".mouse-follow-target__inner-1").addClass("active");
+          } else if (x >= width_half && y >= -height_half && y <= height_half) {
+            // right
+
+            $(".mouse-follow-target__inner").removeClass("active");
+            $(".mouse-follow-target__inner-2").addClass("active");
+          } else if (x >= width_half && y >= height_half) {
+            // bottom-right
+
+            $(".mouse-follow-target__inner").removeClass("active");
+            $(".mouse-follow-target__inner-3").addClass("active");
+          } else if (x >= -width_half && x <= width_half && y >= height_half) {
+            // bottom
+
+            $(".mouse-follow-target__inner").removeClass("active");
+            $(".mouse-follow-target__inner-4").addClass("active");
+          } else if (x <= -width_half && y >= height_half) {
+            // bottom-left
+
+            $(".mouse-follow-target__inner").removeClass("active");
+            $(".mouse-follow-target__inner-5").addClass("active");
+          } else if (
+            x <= -width_half &&
+            y >= -height_half &&
+            y <= height_half
+          ) {
+            // left
+
+            $(".mouse-follow-target__inner").removeClass("active");
+            $(".mouse-follow-target__inner-6").addClass("active");
+          } else if (x <= -width_half && y <= -height_half) {
+            // up-left
+
+            $(".mouse-follow-target__inner").removeClass("active");
+            $(".mouse-follow-target__inner-7").addClass("active");
+          } else {
+            // hover
+
+            $(".mouse-follow-target__inner").removeClass("active");
+            $(".mouse-follow-target__inner-00").addClass("active");
+          }
+
+          mft_wait = true;
+          // after a fraction of a second, allow events again
+          setTimeout(function () {
+            mft_wait = false;
+          }, 1000 / mft_timesPerSecond);
+        }
+      });
+    }
   });
 })(jQuery);
 
