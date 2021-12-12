@@ -460,6 +460,68 @@
         }
       });
     }
+
+    // Random logo animation
+    let logoAnimationLock = false;
+    let logoAnimations = [
+      "logo-animation-13",
+      "logo-animation-12",
+      "logo-animation-11",
+      "logo-animation-10",
+      "logo-animation-9",
+      "logo-animation-8",
+      "logo-animation-7",
+      "logo-animation-6",
+      "logo-animation-5",
+      "logo-animation-4",
+      "logo-animation-3",
+      "logo-animation-2",
+      "logo-animation-1",
+    ];
+    if ($(".logo-animation-random").length) {
+      $(".logo-animation-random").each(function () {
+        const randomAnimation =
+          logoAnimations[Math.floor(Math.random() * logoAnimations.length)];
+        $(this).addClass(randomAnimation);
+      });
+    }
+
+    let larStep = 0;
+    let larInterval = null;
+    $(".logo-animation-random").on("mouseleave", function () {
+      if (logoAnimationLock) {
+        return;
+      }
+
+      logoAnimationLock = true;
+      larInterval = setInterval(() => {
+        larStep += 100;
+
+        if (larStep >= 800) {
+          clearInterval(larInterval);
+          larInterval = null;
+
+          logoAnimations.forEach((item) => {
+            $(this).removeClass(item);
+          });
+
+          setTimeout(() => {
+            const randomAnimation =
+              logoAnimations[Math.floor(Math.random() * logoAnimations.length)];
+            $(this).addClass(randomAnimation);
+          }, 50);
+
+          logoAnimationLock = false;
+        }
+      }, 25);
+    });
+    $(".logo-animation-random").on("mouseenter", function () {
+      if (logoAnimationLock) {
+        clearInterval(larInterval);
+        larInterval = null;
+        logoAnimationLock = false;
+      }
+    });
   });
 })(jQuery);
 
