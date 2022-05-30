@@ -7,7 +7,7 @@ const concat = require("gulp-concat");
 // Uglify - JS minimization
 const uglify = require("gulp-uglify");
 // Sass - css preprocessor
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 // Autoprefixer - adding css vendor prefixes during preprocessing
 const autoprefixer = require("gulp-autoprefixer");
 // cleanCss - CSS minimization
@@ -49,7 +49,6 @@ const paths = {
     dest: "dist/js/",
     tpl: [
       "node_modules/jquery/dist/jquery.min.js",
-      "node_modules/popper.js/dist/umd/popper.min.js",
       "node_modules/bootstrap/dist/js/bootstrap.min.js",
     ],
   },
@@ -65,6 +64,8 @@ const paths = {
     imgSrc: "src/images/**",
     assetsSrc: "src/assets/**",
     assetsDest: "dist/assets",
+    rootSrc: "src/*.*",
+    rootDest: "dist",
   },
   libraries: {
     src: "src/libs/**",
@@ -188,6 +189,11 @@ function buildFonts() {
     .pipe(gulp.dest(paths.assets.fontsDest));
 }
 
+// Move root from working to dist directory
+function buildRoot() {
+  return gulp.src(paths.assets.rootSrc).pipe(gulp.dest(paths.assets.rootDest));
+}
+
 // Optimize and move images from working to dist directory
 function buildImagesProd() {
   return (
@@ -225,8 +231,18 @@ function buildLibraries() {
   return gulp.src(paths.libraries.src).pipe(gulp.dest(paths.libraries.dest)); // Move it to dist/libs
 }
 
-const buildAssetsProd = gulp.parallel(buildFonts, buildImagesProd, buildAssets);
-const buildAssetsDev = gulp.parallel(buildFonts, buildImagesDev, buildAssets);
+const buildAssetsProd = gulp.parallel(
+  buildFonts,
+  buildImagesProd,
+  buildAssets,
+  buildRoot,
+);
+const buildAssetsDev = gulp.parallel(
+  buildFonts,
+  buildImagesDev,
+  buildAssets,
+  buildRoot,
+);
 
 // Config and start browser sync
 function bSync() {
@@ -273,6 +289,10 @@ function watchFiles() {
   // Reload on fonts change
   gulp
     .watch(paths.assets.fontsSrc, gulp.series(buildFonts))
+    .on("change", browserSync.reload);
+  // Reload on root change
+  gulp
+    .watch(paths.assets.rootSrc, gulp.series(buildRoot))
     .on("change", browserSync.reload);
 }
 

@@ -381,12 +381,12 @@
     }
 
     // Mouse follow animated avatar
-    var mft_timesPerSecond = 100; // how many times to fire the event per second
-    var mft_wait = false;
-    if ($(".mouse-follow-target").length) {
+    var s_mft_timesPerSecond = 100; // how many times to fire the event per second
+    var s_mft_wait = false;
+    if ($(".mouse-follow-target-sprite").length) {
       $(document).on("mousemove", function (e) {
-        if (!mft_wait) {
-          let $el = $(".mouse-follow-target");
+        if (!s_mft_wait) {
+          let $el = $(".mouse-follow-target-sprite");
 
           if (!isInViewport($el[0])) {
             return;
@@ -401,36 +401,32 @@
           let x = e.clientX - rect.left - width_half; //x position within the element.
           let y = e.clientY - rect.top - height_half; //y position within the element.
 
+          // 0=0, 000=1, 2=2, 3=3, 4=4, 6=5, 7=6, 9=7, 10=8, 12=9
+
           if (x >= -width_half && x <= width_half && y <= -height_half) {
             // up
 
-            $(".mouse-follow-target__inner").removeClass("active");
-            $(".mouse-follow-target__inner-8").addClass("active");
+            $(".mouse-follow-target-sprite__inner img").css('object-position', `-${width * 9}px 0px`);
           } else if (x >= width_half && y <= -height_half) {
             // up-right
 
-            $(".mouse-follow-target__inner").removeClass("active");
-            $(".mouse-follow-target__inner-1").addClass("active");
+            $(".mouse-follow-target-sprite__inner img").css('object-position', `-${width * 2}px 0px`);
           } else if (x >= width_half && y >= -height_half && y <= height_half) {
             // right
 
-            $(".mouse-follow-target__inner").removeClass("active");
-            $(".mouse-follow-target__inner-2").addClass("active");
+            $(".mouse-follow-target-sprite__inner img").css('object-position', `-${width * 3}px 0px`);
           } else if (x >= width_half && y >= height_half) {
             // bottom-right
 
-            $(".mouse-follow-target__inner").removeClass("active");
-            $(".mouse-follow-target__inner-3").addClass("active");
+            $(".mouse-follow-target-sprite__inner img").css('object-position', `-${width * 4}px 0px`);
           } else if (x >= -width_half && x <= width_half && y >= height_half) {
             // bottom
 
-            $(".mouse-follow-target__inner").removeClass("active");
-            $(".mouse-follow-target__inner-4").addClass("active");
+            $(".mouse-follow-target-sprite__inner img").css('object-position', `-${width * 5}px 0px`);
           } else if (x <= -width_half && y >= height_half) {
             // bottom-left
 
-            $(".mouse-follow-target__inner").removeClass("active");
-            $(".mouse-follow-target__inner-5").addClass("active");
+            $(".mouse-follow-target-sprite__inner img").css('object-position', `-${width * 6}px 0px`);
           } else if (
             x <= -width_half &&
             y >= -height_half &&
@@ -438,25 +434,22 @@
           ) {
             // left
 
-            $(".mouse-follow-target__inner").removeClass("active");
-            $(".mouse-follow-target__inner-6").addClass("active");
+            $(".mouse-follow-target-sprite__inner img").css('object-position', `-${width * 7}px 0px`);
           } else if (x <= -width_half && y <= -height_half) {
             // up-left
 
-            $(".mouse-follow-target__inner").removeClass("active");
-            $(".mouse-follow-target__inner-7").addClass("active");
+            $(".mouse-follow-target-sprite__inner img").css('object-position', `-${width * 8}px 0px`);
           } else {
             // hover
 
-            $(".mouse-follow-target__inner").removeClass("active");
-            $(".mouse-follow-target__inner-00").addClass("active");
+            $(".mouse-follow-target-sprite__inner img").css('object-position', `-${width * 1}px 0px`);
           }
 
-          mft_wait = true;
+          s_mft_wait = true;
           // after a fraction of a second, allow events again
           setTimeout(function () {
-            mft_wait = false;
-          }, 1000 / mft_timesPerSecond);
+            s_mft_wait = false;
+          }, 1000 / s_mft_timesPerSecond);
         }
       });
     }
@@ -523,6 +516,16 @@
       }
     });
   });
+
+  // Service accordion
+  $('.collapse-toggle-wrap--open a').on('click', function() {
+    $('.collapse-toggle-wrap--open').addClass('d-none');
+    $('.collapse-toggle-wrap--close').removeClass('d-none')
+  })
+  $('.collapse-toggle-wrap--close a').on('click', function() {
+    $('.collapse-toggle-wrap--close').addClass('d-none');
+    $('.collapse-toggle-wrap--open').removeClass('d-none')
+  })
 })(jQuery);
 
 function isTouchDevice() {

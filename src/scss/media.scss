@@ -8,6 +8,7 @@
   .mbp-md-60 {
     margin-bottom: 60px;
   }
+
   .mbp-md-30 {
     margin-bottom: 30px;
   }
@@ -25,12 +26,28 @@
   .main-header {
     &__top {
       .dd-tag-wrap {
-        width: 300px;
+        width: 200px;
+      }
+
+      .main-header__languages-wrap {
+        width: 150px;
       }
     }
 
     &__title {
       font-size: 4.375rem;
+    }
+
+    &.sticky {
+      .main-header__middle {
+        .main-header__socials-wrap {
+          width: 160px;
+        }
+
+        .main-header__socials {
+          flex-wrap: wrap;
+        }
+      }
     }
   }
 
@@ -40,18 +57,52 @@
     }
   }
 }
+
 @media (max-width: 992px) {
   .main-header {
+    padding: 12px 0;
+
     &__top {
-      .dd-tag-wrap:nth-child(2) {
-        display: none;
-      }
+      display: none;
+    }
+
+    &__middle {
+      margin-bottom: 0;
+    }
+
+    &__bottom {
+      display: none;
     }
 
     &__title {
-      font-size: 3.125rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    &__contact-btn-wrap {
+      margin-left: auto;
+    }
+
+    .hamburger-wrap {
+      display: block;
+    }
+
+    &.sticky {
+      .main-header {
+        &__middle {
+          .main-header__socials-wrap {
+            display: none;
+          }
+
+          .main-header__languages-wrap {
+            display: none;
+          }
+        }
+      }
     }
   }
+
+
   .main-footer {
     &__gallery-wrapper {
       margin: unset;
@@ -67,18 +118,21 @@
 
       margin-bottom: 1.875rem;
     }
+
     &__small-title {
       font-size: 2rem;
       line-height: 2.5rem;
 
       margin-bottom: 1.5rem;
     }
+
     &__subtitle {
       font-size: 1.75rem;
       line-height: 2rem;
 
       margin-bottom: 1.25rem;
     }
+
     &__small-subtitle {
       font-size: 1.3125rem;
       line-height: 1.75rem;
@@ -101,6 +155,7 @@
       margin-bottom: 1.875rem;
     }
   }
+
   .page-title {
     font-size: 2.5rem;
     line-height: 2.75rem;
@@ -111,6 +166,7 @@
   .dd-table-wrap {
     margin-bottom: 1.875rem;
   }
+
   .dd-table {
     tr {
       td {
@@ -124,6 +180,7 @@
   .article-card-wrap {
     height: 100%;
   }
+
   .article-card {
     height: 100%;
     background: var(--color-background-alt);
@@ -139,6 +196,7 @@
       position: relative;
       z-index: 1;
     }
+
     &__title {
       position: relative;
       z-index: 1;
@@ -150,6 +208,7 @@
       max-width: 320px;
 
       color: inherit;
+
       &:hover {
         text-decoration: none;
         color: inherit;
@@ -157,12 +216,14 @@
 
       a {
         color: inherit;
+
         &:hover {
           text-decoration: none;
           color: inherit;
         }
       }
     }
+
     &__splash-wrap {
       position: absolute;
       bottom: 0;
@@ -170,9 +231,11 @@
 
       pointer-events: none;
     }
+
     &__splash {
       border-bottom-right-radius: 6px;
     }
+
     &__details-btn {
       position: relative;
       z-index: 1;
@@ -183,9 +246,11 @@
       line-height: 1.75rem;
       color: var(--color-accent);
       margin-top: auto;
+
       &:hover {
         text-decoration: none;
       }
+
       i {
         font-size: 10px;
       }
@@ -198,38 +263,6 @@
     }
   }
 
-  .main-header {
-    padding: 12px 0;
-    &__top {
-      display: none;
-    }
-    &__middle {
-      margin-bottom: 0;
-    }
-    &__bottom {
-      display: none;
-    }
-    &__title {
-      font-size: 1.5rem;
-      line-height: 2rem;
-    }
-    &__contact-btn-wrap {
-      margin-left: auto;
-    }
-    .hamburger-wrap {
-      display: block;
-    }
-    &.sticky {
-      .main-header {
-        &__middle {
-          .main-header__socials-wrap {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
   .consultation-well {
     padding: 2.25rem;
 
@@ -238,11 +271,13 @@
 
       padding-bottom: 1.5rem;
     }
+
     &__col {
       padding: 0 40px;
       width: 100%;
       margin-bottom: 1.5rem;
     }
+
     &__col-content {
       padding: 0;
     }
@@ -259,12 +294,15 @@
         margin-bottom: 1rem;
         margin-right: 0;
       }
+
       .dd-input {
         width: 100%;
       }
+
       .dd-button-wrap {
         width: 100%;
       }
+
       .dd-button {
         width: 100%;
       }
@@ -278,17 +316,21 @@
   .tarrif-heading-col {
     display: none;
   }
+
   .tarrif-card {
     &__title {
       margin-bottom: 2rem;
     }
+
     &__line {
       justify-content: space-between;
     }
+
     &__line-title {
       text-align: left;
       display: block;
     }
+
     &__value {
       text-align: right;
       margin-left: 10px;
@@ -300,8 +342,19 @@
       width: 40%;
     }
   }
+
+  .n-service {
+    &__splash-wrap {
+      position: absolute;
+      bottom: 20px;
+      right: 38px;
+      width: 35%;
+    }
+  }
 }
+
 @media (max-width: 768px) {
+
   body,
   html {
     font-size: 14px;
@@ -337,14 +390,43 @@
   // }
 
   .content-swiper {
-    .swiper-wrapper {
-    }
+    .swiper-wrapper {}
 
     .swiper-slide {
       width: 90%;
     }
   }
+
+  .n-service-wrap {
+    margin-bottom: 30px;
+  }
+
+  .n-service {
+    padding: 28px;
+    padding-top: 30px;
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__subtitle {
+      font-size: 21px;
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__splash-wrap {
+      position: absolute;
+      bottom: 20px;
+      right: 38px;
+      width: 30%;
+    }
+  }
+
 }
+
 @media (max-width: 576px) {
   .main-header {
     &__contact-btn-wrap {
@@ -358,6 +440,7 @@
       line-height: 1.8rem;
       text-align: left;
     }
+
     &__header {
       .section__header-details-btn {
         font-size: 12px;
@@ -382,4 +465,50 @@
   .contact-form {
     padding: 1.25rem 2rem;
   }
+
+  .n-services {
+    margin-bottom: 45px;
+  }
+
+  .n-service {
+    &__title {
+      font-size: 21px;
+      line-height: 120%;
+      margin-bottom: 15px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+    }
+
+    &__splash-wrap {
+      width: 50%;
+    }
+
+    &__list {
+      &-item {
+        width: 100%;
+      }
+    }
+  }
+
+  .ns-services {
+    margin-bottom: 45px;
+  }
+
+  .ns-service {
+    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &__title {
+      font-size: 15px;
+      margin-right: 20px;
+    }
+
+    &__icon {
+      transform: scale(0.8);
+    }
+  }
+
 }

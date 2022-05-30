@@ -1,0 +1,19 @@
+
+.icon-arrow:before { content: '\e800'; } /* '' */
+.icon-line:before { content: '\e801'; } /* '' */
+.icon-comment:before { content: '\e802'; } /* '' */
+.icon-pencil_cog:before { content: '\e803'; } /* '' */
+.icon-percent:before { content: '\e804'; } /* '' */
+.icon-stocks:before { content: '\e805'; } /* '' */
+.icon-ticket_cycle:before { content: '\e806'; } /* '' */
+.icon-user:before { content: '\e807'; } /* '' */
+.icon-ad:before { content: '\e808'; } /* '' */
+.icon-analytics:before { content: '\e809'; } /* '' */
+.icon-arrow_down:before { content: '\e80a'; } /* '' */
+.icon-arrow_up:before { content: '\e80b'; } /* '' */
+.icon-card:before { content: '\e80c'; } /* '' */
+.icon-documents:before { content: '\e80d'; } /* '' */
+.icon-people:before { content: '\e80e'; } /* '' */
+.icon-pie:before { content: '\e80f'; } /* '' */
+.icon-plan:before { content: '\e810'; } /* '' */
+.icon-recommend:before { content: '\e811'; } /* '' */
