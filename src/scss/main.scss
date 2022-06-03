@@ -3768,6 +3768,12 @@ a {
     width: 177.77777778vh;
   }
 
+  &__mobile-splash {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
   &__content {
     position: absolute;
     top: 0;
@@ -3811,6 +3817,16 @@ a {
   box-shadow: 0px 8px 26px rgba(43, 45, 51, 0.1);
   position: relative;
 
+  transition: 200ms;
+
+  &:hover {
+    box-shadow: 0px 8px 26px 0 rgba(43, 45, 51, 0.2);
+
+    .n-service__title {
+      color: var(--color-accent);
+    }
+  }
+
   &__title {
     font-family: 'Gotham Pro';
     font-style: normal;
@@ -3818,6 +3834,8 @@ a {
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 38px;
+
+    transition: 200ms;
   }
 
   &__subtitle {
@@ -3898,12 +3916,25 @@ a {
   display: flex;
   align-items: center;
 
+  transition: 200ms;
+
+  &:hover {
+    box-shadow: 0px 8px 26px 0 rgba(43, 45, 51, 0.2);
+
+    .ns-service__title {
+      color: var(--color-accent);
+    }
+  }
+
+
   &__title {
     font-style: normal;
     font-weight: 400;
     font-size: 21px;
     line-height: 28px;
     margin-right: 20px;
+
+    transition: 200ms;
   }
 
   &__icon-wrap {

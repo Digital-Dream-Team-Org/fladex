@@ -15,29 +15,74 @@
         requestObj[item.name] = item.value;
       });
 
-      $.ajax({
-        url,
-        type: method,
-        dataType: dataType,
-        data: {
-          ...requestObj,
-          // action: "ajaxForm",
-          // serialized,
-        },
-        success: function (data) {
-          // Clear inputs
-          self.find("input, textarea").val("");
-
-          // Open thanks popup
-          openSuccessPopup();
-        },
-        error: function (data) {
-          // Basic error handling
-          alert("Ошибка, повторите позднее");
-          console.error(data);
-        },
+      // google recaptcha
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LeLCZYdAAAAAJQ7Nu7U70KEDklSNmcXJICEIyXQ', {action: 'submit'}).then(function(token) {
+          // Add your logic to submit to your backend server here.
+          $.ajax({
+            url,
+            type: method,
+            dataType: dataType,
+            data: {
+              ...requestObj,
+              inputToken: token,
+              // action: "ajaxForm",
+              // serialized,
+            },
+            success: function (data) {
+              // Clear inputs
+              self.find("input, textarea").val("");
+    
+              // Open thanks popup
+              openSuccessPopup();
+            },
+            error: function (data) {
+              // Basic error handling
+              alert("Ошибка, повторите позднее");
+              console.error(data);
+            },
+          });
+          fbq('track', 'Lead');
+        });
       });
     });
+
+    // $(".ajax-contact-form").on("submit", function (e) {
+    //   e.preventDefault();
+    //   const url = $(this).attr("action");
+    //   const method = $(this).attr("method");
+    //   const dataType = $(this).data("type") || null;
+    //   const serializedArray = $(this).serializeArray();
+    //   const self = $(this);
+
+    //   let requestObj = {};
+    //   serializedArray.forEach((item) => {
+    //     requestObj[item.name] = item.value;
+    //   });
+
+    //   $.ajax({
+    //     url,
+    //     type: method,
+    //     dataType: dataType,
+    //     data: {
+    //       ...requestObj,
+    //       // action: "ajaxForm",
+    //       // serialized,
+    //     },
+    //     success: function (data) {
+    //       // Clear inputs
+    //       self.find("input, textarea").val("");
+
+    //       // Open thanks popup
+    //       openSuccessPopup();
+    //     },
+    //     error: function (data) {
+    //       // Basic error handling
+    //       alert("Ошибка, повторите позднее");
+    //       console.error(data);
+    //     },
+    //   });
+    // });
 
     // popups
     // contact popup
